@@ -184,11 +184,11 @@ h1.widget.Logo {
    
 a.logo {
     height: 150px !important;
-    width: 250px !important;
+    width: 275px !important;
 }
 
 .Logo { 
-   max-height: 150px !important; 
+   max-height: 175px !important; 
 }
 
 }
