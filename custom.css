@@ -1,1 +1,180 @@
-.widget.GalleryNav{display:none}.ThumbStrip>.content.small-padding .img{padding:0 4px 4px 0}.life-before{font-weight:400}.Nav ul div{top:25%;left:45px}.life-after>span{display:block;margin-top:12px}.navTop .group>span::before,.navTop .group>span::after,.life-before::before,.life-before::after,.life-after::before,.life-after>span::after{display:none!important;content:none!important}.life-before,.life-after,.life-after>span{color:#222!important;cursor:default!important;text-decoration:none!important;font-style:normal!important}.navTop .group>span:not(.life-before):not(.life-after){cursor:pointer;font-style:italic;font-weight:700;text-decoration:underline;color:#1173b6}.navTop .group>span:not(.life-before):not(.life-after):hover{color:#0645ff!important}h1.widget.Logo{padding:8px 16px}@media(min-width:769px){.header{position:relative!important;z-index:9999!important;overflow:visible!important;background:transparent!important;padding:0!important}.header::before{content:"";position:absolute;inset:0;background:url("https://m.psecn.photoshelter.com/direct-link/l/0/Xu.43y2TNVw/hJShAphJNh_OhJ4hAwhJ.hJHhJhJrhA1h_/cloud-background.png") center/cover no-repeat;opacity:.35;z-index:-1;pointer-events:none}.header>*{background-color:transparent!important}.header .nav,.header .nav-scroll,.header .nav ul,.header .nav li{overflow:visible!important}.header .nav ul div{z-index:10000!important}.main{position:relative;z-index:1}}@media(max-width:768px){.header{background:linear-gradient(#ffffffa6,#ffffffa6),url("https://m.psecn.photoshelter.com/direct-link/l/0/Xu.43y2TNVw/hJShAphJNh_OhJ4hAwhJ.hJHhJhJrhA1h_/cloud-background.png") center/cover no-repeat!important}.life-before,.life-after{display:none!important}.navTop .group>span:not(.life-before):not(.life-after){display:block!important;margin:0!important;padding:0!important;color:#222!important;font-style:normal!important;font-weight:400!important;text-decoration:none!important}.navTop .group>span:not(.life-before):not(.life-after)::before,.navTop .group>span:not(.life-before):not(.life-after)::after{display:none!important;content:none!important}}
+/* =========================================================
+   FRED COOPER MEMORIAL SITE
+   Custom PhotoShelter Styles
+   ========================================================= */
+
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.widget.GalleryNav {
+  display: none;
+}
+
+.ThumbStrip > .content.small-padding .img {
+  padding: 0 4px 4px 0;
+}
+
+
+/* =========================================================
+   LIFE ON EARTH NAVIGATION
+   ========================================================= */
+
+.life-before {
+  font-weight: 400;
+}
+
+.life-after > span {
+  display: block;
+  margin-top: 12px;
+}
+
+/* Remove PhotoShelter decorative markers around custom text */
+
+.navTop .group > span::before,
+.navTop .group > span::after,
+.life-before::before,
+.life-before::after,
+.life-after::before,
+.life-after > span::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Intro / supporting LIFE ON EARTH text */
+
+.life-before,
+.life-after,
+.life-after > span {
+  color: #222 !important;
+  cursor: default !important;
+  text-decoration: none !important;
+  font-style: normal !important;
+}
+
+/* LIFE ON EARTH clickable navigation item */
+
+.navTop .group > span:not(.life-before):not(.life-after) {
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #1173b6;
+}
+
+.navTop .group > span:not(.life-before):not(.life-after):hover {
+  color: #0645ff !important;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+h1.widget.Logo {
+  padding: 8px 16px;
+}
+
+
+/* =========================================================
+   DROPDOWN POSITIONING
+   ========================================================= */
+
+.Nav ul div {
+  top: 25%;
+  left: 45px;
+}
+
+
+/* =========================================================
+   DESKTOP HEADER + CLOUD BACKGROUND
+   ========================================================= */
+
+@media (min-width: 769px) {
+
+  .header {
+    position: relative !important;
+    z-index: 9999 !important;
+    overflow: visible !important;
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  .header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      url("https://m.psecn.photoshelter.com/direct-link/l/0/Xu.43y2TNVw/hJShAphJNh_OhJ4hAwhJ.hJHhJhJrhA1h_/cloud-background.png")
+      center / cover no-repeat;
+    opacity: 0.35;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .header > * {
+    background-color: transparent !important;
+  }
+
+  .header .nav,
+  .header .nav-scroll,
+  .header .nav ul,
+  .header .nav li {
+    overflow: visible !important;
+  }
+
+  .header .nav ul div {
+    z-index: 10000 !important;
+  }
+
+  .main {
+    position: relative;
+    z-index: 1;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE HEADER + NAVIGATION
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Cloud background without disturbing PhotoShelter's
+     mobile hamburger / stacking behavior */
+
+  .header {
+    background:
+      linear-gradient(#ffffffa6, #ffffffa6),
+      url("https://m.psecn.photoshelter.com/direct-link/l/0/Xu.43y2TNVw/hJShAphJNh_OhJ4hAwhJ.hJHhJhJrhA1h_/cloud-background.png")
+      center / cover no-repeat !important;
+  }
+
+  /* Hide custom explanatory text from mobile menu */
+
+  .life-before,
+  .life-after {
+    display: none !important;
+  }
+
+  /* Restore normal mobile styling for LIFE ON EARTH */
+
+  .navTop .group > span:not(.life-before):not(.life-after) {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #222 !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+  }
+
+  .navTop .group > span:not(.life-before):not(.life-after)::before,
+  .navTop .group > span:not(.life-before):not(.life-after)::after {
+    display: none !important;
+    content: none !important;
+  }
+
+}
