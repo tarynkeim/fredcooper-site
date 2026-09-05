@@ -177,4 +177,8 @@ h1.widget.Logo {
     content: none !important;
   }
 
+   #c2content>div .header, #c1 .header {
+    min-height: 10em;
+   }
+
 }
