@@ -179,11 +179,11 @@ h1.widget.Logo {
 
  #c2content>div .header, #c1 .header {
     min-height: 10em !important;
-    padding: 10px 0;
+    padding: 0;
 }
    
 a.logo {
-    height: 150px !important;
+    height: 175px !important;
     width: 275px !important;
 }
 
