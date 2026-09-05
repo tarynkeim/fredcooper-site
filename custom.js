@@ -1,3 +1,7 @@
+/* =========================================================
+   GALLERY AUTOPLAY
+   ========================================================= */
+
 setInterval(function () {
   var nextButton = document.querySelector('.ViewToggle .next');
 
@@ -7,40 +11,58 @@ setInterval(function () {
 }, 15000);
 
 
+/* =========================================================
+   LIFE ON EARTH NAVIGATION TEXT
+   ========================================================= */
+
 function addLifeText() {
-  var spans = document.querySelectorAll('.navTop span');
-  var lifeSpan = null;
 
-  for (var i = 0; i < spans.length; i++) {
-    if (spans[i].textContent.trim() === 'LIFE ON EARTH') {
-      lifeSpan = spans[i];
-      break;
+  var elements = document.querySelectorAll(
+    '.navTop span, .navTop a, .Nav span, .Nav a'
+  );
+
+  for (var i = 0; i < elements.length; i++) {
+
+    var item = elements[i];
+
+    if (item.classList.contains('life-before') ||
+        item.classList.contains('life-after')) {
+      continue;
     }
-  }
 
-  if (!lifeSpan) {
-    return;
-  }
+    if (item.textContent.trim() !== 'LIFE ON EARTH') {
+      continue;
+    }
 
-  var parent = lifeSpan.parentNode;
+    var parent = item.parentNode;
 
-  if (!parent.querySelector('.life-before')) {
-    lifeSpan.insertAdjacentHTML(
-      'beforebegin',
-      '<span class="life-before">Thoughts Regarding </span>'
-    );
-  }
+    if (!parent) {
+      continue;
+    }
 
-  if (!parent.querySelector('.life-after')) {
-    lifeSpan.insertAdjacentHTML(
-      'afterend',
-      '<span class="life-after">,<span>Developed During My 70+ Years</span><span>Beginning December 13th, 1949</span></span>'
-    );
+    if (!parent.querySelector('.life-before')) {
+      item.insertAdjacentHTML(
+        'beforebegin',
+        '<span class="life-before">Thoughts Regarding </span>'
+      );
+    }
+
+    if (!parent.querySelector('.life-after')) {
+      item.insertAdjacentHTML(
+        'afterend',
+        '<span class="life-after">,<span>Developed During My 70+ Years</span><span>Beginning December 13th, 1949</span></span>'
+      );
+    }
   }
 }
 
 
+/* =========================================================
+   INITIALIZE + WATCH FOR PHOTOSHELTER NAV REBUILDS
+   ========================================================= */
+
 function initLifeText() {
+
   addLifeText();
 
   var observer = new MutationObserver(function () {
