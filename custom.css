@@ -9,7 +9,7 @@
    ========================================================= */
 
 .widget.GalleryNav {
-  display: none;
+  display: none !important;
 }
 
 .ThumbStrip > .content.small-padding .img {
