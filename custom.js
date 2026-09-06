@@ -18,43 +18,27 @@ setInterval(function () {
    ========================================================= */
 
 function addLifeText() {
+  var items = document.querySelectorAll('.navTop .group > span');
 
-  var elements = document.querySelectorAll(
-    '.navTop span, .navTop a, .Nav span, .Nav a'
-  );
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
 
-  for (var i = 0; i < elements.length; i++) {
-
-    var item = elements[i];
-
-    if (item.classList.contains('life-before') ||
-        item.classList.contains('life-after')) {
+    if (
+      item.dataset.lifeEnhanced === 'true' ||
+      item.textContent.trim() !== 'LIFE ON EARTH'
+    ) {
       continue;
     }
 
-    if (item.textContent.trim() !== 'LIFE ON EARTH') {
-      continue;
-    }
+    item.dataset.lifeEnhanced = 'true';
 
-    var parent = item.parentNode;
-
-    if (!parent) {
-      continue;
-    }
-
-    if (!parent.querySelector('.life-before')) {
-      item.insertAdjacentHTML(
-        'beforebegin',
-        '<span class="life-before">Thoughts Regarding </span>'
-      );
-    }
-
-    if (!parent.querySelector('.life-after')) {
-      item.insertAdjacentHTML(
-        'afterend',
-        '<span class="life-after">,<span>Developed During My 70+ Years</span><span>Beginning December 13th, 1949</span></span>'
-      );
-    }
+    item.innerHTML =
+      '<span class="life-before">Thoughts Regarding </span>' +
+      '<span class="life-title">LIFE ON EARTH</span>' +
+      '<span class="life-after">,' +
+        '<span>Developed During My 70+ Years</span>' +
+        '<span>Beginning December 13th, 1949</span>' +
+      '</span>';
   }
 }
 
@@ -64,7 +48,6 @@ function addLifeText() {
    ========================================================= */
 
 function initLifeText() {
-
   addLifeText();
 
   var observer = new MutationObserver(function () {
@@ -76,7 +59,6 @@ function initLifeText() {
     subtree: true
   });
 }
-
 
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initLifeText);
