@@ -1,12 +1,14 @@
 /* =========================================================
-   GALLERY AUTOPLAY
+   GALLERY AUTOPLAY — DESKTOP ONLY
    ========================================================= */
 
 setInterval(function () {
-  var nextButton = document.querySelector('.ViewToggle .next');
+  if (window.innerWidth > 768) {
+    var nextButton = document.querySelector('.ViewToggle .next');
 
-  if (nextButton) {
-    nextButton.click();
+    if (nextButton) {
+      nextButton.click();
+    }
   }
 }, 15000);
 
