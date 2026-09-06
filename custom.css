@@ -23,6 +23,27 @@
 
 .life-before {
   font-weight: 400;
+  color: #222;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.life-title {
+  color: #1173b6;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.life-title:hover {
+  color: #0645ff;
+}
+
+.life-after {
+  color: #222;
+  font-style: normal;
+  text-decoration: none;
 }
 
 .life-after > span {
@@ -30,41 +51,16 @@
   margin-top: 12px;
 }
 
-/* Remove PhotoShelter decorative markers around custom text */
-
-.navTop .group > span::before,
-.navTop .group > span::after,
 .life-before::before,
 .life-before::after,
+.life-title::before,
+.life-title::after,
 .life-after::before,
+.life-after::after,
+.life-after > span::before,
 .life-after > span::after {
   display: none !important;
   content: none !important;
-}
-
-/* Intro / supporting LIFE ON EARTH text */
-
-.life-before,
-.life-after,
-.life-after > span {
-  color: #222 !important;
-  cursor: default !important;
-  text-decoration: none !important;
-  font-style: normal !important;
-}
-
-/* LIFE ON EARTH clickable navigation item */
-
-.navTop .group > span:not(.life-before):not(.life-after) {
-  cursor: pointer;
-  font-style: italic;
-  font-weight: 700;
-  text-decoration: underline;
-  color: #1173b6;
-}
-
-.navTop .group > span:not(.life-before):not(.life-after):hover {
-  color: #0645ff !important;
 }
 
 
