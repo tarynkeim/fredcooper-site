@@ -138,6 +138,11 @@ h1.widget.Logo {
 
 @media (max-width: 768px) {
 
+   .show-nav:before {
+      color: #2e6493;
+      font-size: 24px;
+   }
+
   /* Cloud background without disturbing PhotoShelter's
      mobile hamburger / stacking behavior */
 
